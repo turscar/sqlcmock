@@ -209,11 +209,11 @@ func (output *Output) setOutputPackage(opts Opts) {
 		output.GenPackage = opts.OutputPackage
 		return
 	}
-	pkg := os.Getenv("GOPACKAGE")
-	if pkg != "" {
-		output.GenPackage = pkg
-		return
-	}
+	//pkg := os.Getenv("GOPACKAGE")
+	//if pkg != "" {
+	//	output.GenPackage = pkg
+	//	return
+	//}
 	outPath, err := filepath.Abs(opts.OutputFile)
 	if err != nil {
 		log.Fatal(err)
